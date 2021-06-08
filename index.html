@@ -29,8 +29,8 @@
   const encryptedParams = window.location.search.substring(1)
   const params = encryptedParams.includes("=") ? new URLSearchParams(encryptedParams) : 
                                                  new URLSearchParams(ctob(encryptedParams));
-  const original = params.get('o');
-  const glitch = params.get('g');
+  const original = params.get('o') ? params.get('o') : "nvios.";
+  const glitch = params.get('g') ? params.get('g') : "glitch";
   const text = document.getElementById("text");
 
   var mouseX = 0, mouseY = 0,
